@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Home from './components/Home'
 import General from './components/General';
@@ -7,7 +7,7 @@ import Settings from './components/Settings';
 import LogOut from './components/LogOut';
 
 function App() {
-  const routes = createBrowserRouter(
+  const routes = createHashRouter(
     [
       {
         path: "/",
@@ -20,9 +20,7 @@ function App() {
         ],
       },
     ],
-    {
-      basename: "/task2-react", 
-    }
+    
   );
   return (
     <>
